@@ -27,4 +27,4 @@ app.use(bodyParser())
 
 app.use(router.routes())
 
-app.listen(3001, ()=>{console.log('server start...')})
+app.listen(3000, ()=>{console.log('server start...')})
