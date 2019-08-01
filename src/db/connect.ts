@@ -2,14 +2,14 @@
  * 数据库连接
  */
 
-import {db} from '../config'
+import {connectStr, db} from '../config'
 import * as mongoose from 'mongoose'
 
-mongoose.connect(db.name)
+mongoose.connect(connectStr, { useNewUrlParser: true })
 const dbObj = mongoose.connection
 
 dbObj.on('open', () =>{
-  console.log('data connect success:', db.name)
+  console.log('data connect success:', connectStr)
 })
 
 export default dbObj
