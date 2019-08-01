@@ -8,6 +8,11 @@ import {router} from './router'
 import * as db from './db/connect'
 const dbObj = db
 
+// const db = require('./db/connect')
+// 静态资源配置
+import * as server from 'koa-static'
+
+
 const app =  new Koa
 app.use(cors({
   origin: function(ctx) {
@@ -22,6 +27,8 @@ app.use(cors({
   allowMethods: ['GET', 'POST', 'DELETE', 'PUT'],
   allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
 }))
+
+app.use(server(__dirname + '/public'))
 
 app.use(bodyParser())
 

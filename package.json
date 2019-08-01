@@ -4,7 +4,8 @@
   "description": "koa es6 ts ",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch src/**/* -e ts,tsx --exec ts-node src/app.ts"
+    "dev": "nodemon --watch src/**/* -e ts,tsx --exec ts-node src/app.ts",
+    "build": "webpack --config ./build/webpack.product.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,12 @@
   },
   "homepage": "https://github.com/miujg/koa-ts-template#readme",
   "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@types/koa-static": "^4.0.1",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "externals-dependencies": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
@@ -27,7 +34,8 @@
     "koa-static": "^4.0.3",
     "koa2-cors": "^2.0.6",
     "log4js": "^2.8.0",
-    "mongoose": "^5.1.1"
+    "mongoose": "^5.1.1",
+    "ts-loader": "^6.0.4"
   },
   "devDependencies": {
     "@types/koa": "^2.0.49",
@@ -35,8 +43,11 @@
     "@types/koa-router": "^7.0.42",
     "@types/koa2-cors": "^2.0.1",
     "@types/mongoose": "^5.5.8",
+    "clean-webpack-plugin": "^3.0.0",
     "nodemon": "^1.19.1",
     "ts-node": "^8.3.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6"
   }
 }
