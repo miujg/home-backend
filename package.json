@@ -4,6 +4,7 @@
   "description": "koa es6 ts ",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node src/app.ts",
     "dev": "nodemon --watch src/**/* -e ts,tsx --exec ts-node src/app.ts",
     "build": "webpack --config ./build/webpack.product.js"
   },
