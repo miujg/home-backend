@@ -11,7 +11,7 @@ module.exports = {
 	},
 	mode: 'production',
 	output: {
-		path: path.resolve(__dirname, '../src'),
+		path: path.resolve(__dirname, '../dist'),
 		filename: '[name].js',
 	},
 	resolve: {
