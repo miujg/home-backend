@@ -2,7 +2,7 @@ const db = {
   user: 'jgmiu',
   password: 'jgmiu1994',
   dataName: 'home-data',
-  host: '139.129.102.157:27017',
+  host: '139.129.102.157',
   port: '27017',
   name: 'mongodb://jgmiu:jgmiu1994@139.129.102.157:27017/home-data'
 }
